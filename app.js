@@ -40,9 +40,6 @@ app.set('etag', WEB_CACHE)
 const limiter = rateLimit({ windowMs: REQUEST_TIME, max: REQUEST_NUMBER })
 app.use(limiter)
 
-app.get("/api", (req, res) => {
-    res.send("I am working")
-})
 
 
 app.use("/api", router)
